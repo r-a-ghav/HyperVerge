@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="poll.css">
+    <link rel="stylesheet" href="pomo.css">
+    <link rel="stylesheet" href="dgc.css">
+<style>
+    body {  background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); }
+.grid-container {
+  display: grid;
+  height: 20px;
+  align-content: space-evenly;
+  grid-template-columns: auto auto auto;
+  gap: 25px;
+  /* background-color: #2196F3; */
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 75px 0;
+  font-size: 30px;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div>
+    <div id="pomodoro-timer" class="widget">
+        <h2>Pomodoro Timer</h2>
+        <div id="timer">
+          <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+        <button id="start">Start</button>
+        <button id="reset">Reset</button>
+      </div>
+        <script src="pomo.js"></script>
+</div>
+
+  <div>
+    <div class="dgc-container">
+        <h1>Daily Growth Checklist</h1>
+        <input type="text" id="taskInput" placeholder="Add a new task...">
+        <button id="addTaskButton">Add Task</button>
+        <ul id="taskList"></ul>
+    </div>
+
+    <script src="dgc.js"></script>
+  </div>
+  <div>
+    <div class="poll-container">
+        <h1>Poll</h1>
+        <div class="poll-section" id="pollSection">
+            <h2 id="pollQuestion"></h2>
+            <ul id="pollOptions"></ul>
+            <button id="submitVoteButton">Submit Vote</button>
+        </div>
+        <div class="result-section" id="resultSection">
+            <h2>Results</h2>
+            <ul id="resultList"></ul>
+        </div>
+    </div>
+
+    <script src="poll.js"></script>
+  </div>  
+  <div>
+    <h1>Slide</h1>
+    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR2v07kXBivI_qCAuSsnzIKx1_BEkWKCojbb3JZ2_i6t0TEcrmwcGSlnuGYAz7h6QeZl8jyfjanXNxj/embed?start=true&loop=false&delayms=3000" frameborder="0" width="300" height="200" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+  </div>
+  <div>
+    <h1>Calendar</h1>
+    <iframe src="https://calendar.google.com/calendar/embed?src=addressbook%23contacts%40group.v.calendar.google.com&ctz=Asia%2FKolkata" style="border: 0" width="300" height="200" frameborder="0" scrolling="no"></iframe>
+  </div>
+  <div>
+    <h1>Form</h1>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeTqLn-63L7H0nZzU3sobXuRbNYN1pzQGn4aAMeWo7_nZVrMA/viewform?embedded=true" width="300" height="200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>  
+</div>
+
+</body>
+</html>
